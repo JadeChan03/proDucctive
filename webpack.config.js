@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = {
   //entry point to create the bundle
-  entry: [path.join(__dirname, './client/index.js')],
+  entry: [path.join(__dirname, './client/src/index.js')],
   //switch production and dev
   mode: process.env.NODE_ENV,
   //create a bundle.js file in 'build' folder for production
@@ -13,7 +13,7 @@ module.exports = {
     path: path.join(__dirname, 'build'),
   },
   //generates the production html file using index.html as a template
-  plugins: [new htmlWebPackPlugIns({ template: 'index.html' })],
+  plugins: [new htmlWebPackPlugIns({ template: './client/public/index.html' })],
   //developments server is listening at HTTP://Localhost:8888 & serving the static files in a 'build' folder
   devServer: {
     port: 8888,
@@ -50,5 +50,9 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],
+  },
+  // Resolve section to handle file extensions
+  resolve: {
+    extensions: ['.js', '.jsx', '.json'], // Add extensions you want Webpack to resolve
   },
 };
