@@ -1,0 +1,14 @@
+// Define a mixin for centering flexbox
+@mixin center-flex {
+    display: flex;
+	flex-direction: column;
+    justify-content: center; // Center horizontally
+    align-items: center; // Center vertically
+}
+
+// Sunset Color Variables
+$muted-sunset-orange: #DFAF8B; // Soft Orange
+$muted-sunset-pink: #F5B3A2;   // Light Pink
+$muted-sunset-purple: #BFA4D5; // Lavender
+$muted-sunset-yellow: #E2C679; // Soft Yellow
+$muted-sunset-blue: #A4C8E1; // Pale Blue

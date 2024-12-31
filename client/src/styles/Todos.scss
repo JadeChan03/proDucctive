@@ -1,0 +1,8 @@
+/* styles specific to Todos component */
+@use 'styles';
+
+
+.todosContainer {
+	@include styles.center-flex;
+    background-color: styles.$muted-sunset-purple; // Blue Violet  
+}

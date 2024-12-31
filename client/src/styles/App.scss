@@ -1,1 +1,9 @@
-/* component specific styles */
+/* styles specific to App component */
+@use 'styles';
+
+.container {
+    @include styles.center-flex;
+	height: 100vh; 
+    background-color: styles.$muted-sunset-pink; 
+    border: 1px solid #ccc; 
+}

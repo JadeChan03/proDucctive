@@ -46,8 +46,17 @@ module.exports = {
       },
       //transpile sass and css files
       {
-        test: /\.s?css/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        test: /\.css$|\.scss$/, // Matches both .css and .scss files
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+              loader: 'sass-loader',
+              options: {
+                  implementation: require('sass'), // Ensure you're using Dart Sass
+              },
+          },
+      ],
       },
     ],
   },
